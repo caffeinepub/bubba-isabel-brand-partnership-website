@@ -1,0 +1,60 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-ensure-the-production-deployment-uses-the-canonical-public-url-https-bubbas-big-adventure-com-as-the-single-source-of-truth-by-setting-and-documenting-the-required-vite-public-url-environment-variable-for-production-builds-matching-the-existing-default-in-frontend-src-config-publicurl-ts",
+      "featureTitle": "Ensure the production deployment uses the canonical public URL https://bubbas.big.adventure.com as the single source of truth by setting and documenting the required VITE_PUBLIC_URL environment variable for production builds, matching the existing default in frontend/src/config/publicUrl.ts.",
+      "files": [
+        "frontend/.env.production.example",
+        "frontend/PUBLIC_URL.md"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-verify-and-keep-the-site-s-share-seo-metadata-aligned-to-the-canonical-url-https-bubbas-big-adventure-com-canonical-link-og-url-twitter-url-so-that-production-sharing-previews-resolve-to-the-correct-domain",
+      "featureTitle": "Verify and keep the site’s share/SEO metadata aligned to the canonical URL https://bubbas.big.adventure.com (canonical link, og:url, twitter:url) so that production sharing previews resolve to the correct domain.",
+      "files": [
+        "frontend/src/config/publicUrl.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-confirm-the-footer-social-link-for-facebook-opens-exactly-https-www-facebook-com-share-1andnu7trz-mibextid-wwxifr-in-production",
+      "featureTitle": "Confirm the footer social link for Facebook opens exactly https://www.facebook.com/share/1AndNU7trz/?mibextid=wwXIfr in production.",
+      "files": [
+        "frontend/src/components/site/Footer.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

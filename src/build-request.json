@@ -1,0 +1,72 @@
+{
+  "kind": "build_request",
+  "title": "Go live: production-ready deployment configuration and canonical URL",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Ensure the production deployment uses the canonical public URL https://bubbas.big.adventure.com as the single source of truth by setting and documenting the required VITE_PUBLIC_URL environment variable for production builds, matching the existing default in frontend/src/config/publicUrl.ts.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Go live"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A production build can be configured with VITE_PUBLIC_URL=https://bubbas.big.adventure.com without code changes.",
+        "Documentation in the repo clearly states how to set VITE_PUBLIC_URL for production deployments."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Verify and keep the site’s share/SEO metadata aligned to the canonical URL https://bubbas.big.adventure.com (canonical link, og:url, twitter:url) so that production sharing previews resolve to the correct domain.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Go live"
+        ]
+      },
+      "acceptanceCriteria": [
+        "frontend/index.html contains canonical/OG/Twitter URL metadata pointing to https://bubbas.big.adventure.com.",
+        "No other hard-coded public URL values conflict with https://bubbas.big.adventure.com."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Confirm the footer social link for Facebook opens exactly https://www.facebook.com/share/1AndNU7trz/?mibextid=wwXIfr in production.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Go live"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking the Facebook icon in the footer navigates to https://www.facebook.com/share/1AndNU7trz/?mibextid=wwXIfr in a new tab.",
+        "The link includes rel=\"noopener noreferrer\" for external navigation security."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/components/ui (read-only).",
+    "Do not edit immutable hook files: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx.",
+    "Backend must remain a single Motoko actor in backend/main.mo; do not introduce additional backend services."
+  ],
+  "nonGoals": [
+    "Adding new site sections, pages, or content changes unrelated to launch readiness.",
+    "Implementing non-Internet-Identity authentication or any third-party auth provider integration.",
+    "Adding a database or external hosting/cloud infrastructure automation beyond documenting required env configuration."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

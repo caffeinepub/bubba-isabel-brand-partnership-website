@@ -1,0 +1,17 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T20:46:39.636Z",
+  "summary": "Diff adds production env example and documentation for VITE_PUBLIC_URL, reinforces PUBLIC_URL default to canonical domain, updates footer Facebook link to the exact required share URL with secure external-link attrs, and (per file summary) aligns index.html canonical/OG/Twitter URL metadata to https://bubbas.big.adventure.com.",
+  "missing_requirements": [],
+  "hallucinated_features": [],
+  "confidence": 0.66,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/.env.production.example",
+    "frontend/PUBLIC_URL.md",
+    "frontend/src/components/site/Footer.tsx",
+    "frontend/src/config/publicUrl.ts",
+    "project_state.json"
+  ]
+}

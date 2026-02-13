@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Project moving toward production launch (go live) and deployment.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-ensure-the-production-deployment-uses-the-canonical-public-url-https-bubbas-big-adventure-com-as-the-single-source-of-truth-by-setting-and-documenting-the-required-vite-public-url-environment-variable-for-production-builds-matching-the-existing-default-in-frontend-src-config-publicurl-ts",
+      "title": "Ensure the production deployment uses the canonical public URL https://bubbas.big.adventure.com as the single source of truth by setting and documenting the required VITE_PUBLIC_URL environment variable for production builds, matching the existing default in frontend/src/config/publicUrl.ts.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-verify-and-keep-the-site-s-share-seo-metadata-aligned-to-the-canonical-url-https-bubbas-big-adventure-com-canonical-link-og-url-twitter-url-so-that-production-sharing-previews-resolve-to-the-correct-domain",
+      "title": "Verify and keep the site’s share/SEO metadata aligned to the canonical URL https://bubbas.big.adventure.com (canonical link, og:url, twitter:url) so that production sharing previews resolve to the correct domain.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-confirm-the-footer-social-link-for-facebook-opens-exactly-https-www-facebook-com-share-1andnu7trz-mibextid-wwxifr-in-production",
+      "title": "Confirm the footer social link for Facebook opens exactly https://www.facebook.com/share/1AndNU7trz/?mibextid=wwXIfr in production.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Go live / deploy the current site to production",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Go live: production-ready deployment configuration and canonical URL",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

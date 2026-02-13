@@ -1,2 +1,3 @@
-# bubba-isabel-brand-partnership-website
-Exported from Caffeine project: Go live: production-ready deployment configuration and canonical URL
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

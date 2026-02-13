@@ -1,0 +1,62 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Production-ready canonical public URL and launch metadata alignment",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Document and standardize production configuration for the canonical public URL via VITE_PUBLIC_URL, matching the default in publicUrl.ts.",
+      "acceptanceCriteria": [
+        "A production build can be configured with VITE_PUBLIC_URL=https://bubbas.big.adventure.com without code changes.",
+        "Documentation in the repo clearly states how to set VITE_PUBLIC_URL for production deployments."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/PUBLIC_URL.md",
+          "operation": "modify",
+          "description": "Expand the documentation to explicitly describe how production deployments must set VITE_PUBLIC_URL=https://bubbas.big.adventure.com (including where to set environment variables in common deployment scenarios), and clarify that frontend/src/config/publicUrl.ts is the single source of truth used by the app."
+        },
+        {
+          "path": "frontend/.env.production.example",
+          "operation": "create",
+          "description": "Add an example production environment file demonstrating the required VITE_PUBLIC_URL=https://bubbas.big.adventure.com value to make production configuration copy/pasteable and reduce misconfiguration risk."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Keep canonical/OG/Twitter URL metadata aligned to https://bubbas.big.adventure.com and prevent conflicting hard-coded public URLs.",
+      "acceptanceCriteria": [
+        "frontend/index.html contains canonical/OG/Twitter URL metadata pointing to https://bubbas.big.adventure.com.",
+        "No other hard-coded public URL values conflict with https://bubbas.big.adventure.com."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Verify canonical link, og:url, and twitter:url are set to https://bubbas.big.adventure.com and update/normalize them if needed so production sharing previews resolve to the correct domain."
+        },
+        {
+          "path": "frontend/src/config/publicUrl.ts",
+          "operation": "modify",
+          "description": "Tighten inline documentation to explicitly state that VITE_PUBLIC_URL is the required production override and that the default fallback must remain https://bubbas.big.adventure.com to match the canonical domain."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Ensure the footer Facebook social link opens the exact share URL in a new tab with proper external-link security attributes.",
+      "acceptanceCriteria": [
+        "Clicking the Facebook icon in the footer navigates to https://www.facebook.com/share/1AndNU7trz/?mibextid=wwXIfr in a new tab.",
+        "The link includes rel=\"noopener noreferrer\" for external navigation security."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/site/Footer.tsx",
+          "operation": "modify",
+          "description": "Confirm the Facebook anchor href is exactly https://www.facebook.com/share/1AndNU7trz/?mibextid=wwXIfr, uses target=\"_blank\", and includes rel=\"noopener noreferrer\"; refactor to a file-level constant to reduce accidental drift without changing behavior."
+        }
+      ]
+    }
+  ]
+}

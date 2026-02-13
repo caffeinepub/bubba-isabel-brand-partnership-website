@@ -1,0 +1,65 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T20:46:39.638Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 3,
+    "implemented": 3,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Ensure the production deployment uses the canonical public URL https://bubbas.big.adventure.com as the single source of truth by setting and documenting the required VITE_PUBLIC_URL environment variable for production builds, matching the existing default in frontend/src/config/publicUrl.ts.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/PUBLIC_URL.md",
+          "frontend/.env.production.example"
+        ],
+        "matchedFiles": [
+          "frontend/PUBLIC_URL.md",
+          "frontend/.env.production.example"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Verify and keep the site’s share/SEO metadata aligned to the canonical URL https://bubbas.big.adventure.com (canonical link, og:url, twitter:url) so that production sharing previews resolve to the correct domain.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/index.html",
+          "frontend/src/config/publicUrl.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/config/publicUrl.ts"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Confirm the footer social link for Facebook opens exactly https://www.facebook.com/share/1AndNU7trz/?mibextid=wwXIfr in production.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/site/Footer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/site/Footer.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/.env.production.example",
+    "frontend/PUBLIC_URL.md",
+    "frontend/src/components/site/Footer.tsx",
+    "frontend/src/config/publicUrl.ts",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
