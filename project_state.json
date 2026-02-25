@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-in-the-media-kit-stats-section-update-the-engagement-rate-display-value-from-its-current-number-to-5-2",
+      "title": "In the media kit stats section, update the engagement rate display value from its current number to 5.2%.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [],
+  "projectName": "Update engagement rate to 5.2%",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

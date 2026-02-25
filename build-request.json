@@ -1,0 +1,36 @@
+{
+  "kind": "build_request",
+  "title": "Update engagement rate to 5.2%",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "In the media kit stats section, update the engagement rate display value from its current number to 5.2%.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-8"
+        ],
+        "quotes": [
+          "change engagement rate number to 5.2%"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The engagement rate stat in the Media Kit section displays exactly '5.2%'.",
+        "All other stats and content remain unchanged."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not change any other content, layout, or styling."
+  ],
+  "nonGoals": [
+    "Modifying any other stat or metric value.",
+    "Changing backend logic or data models.",
+    "Altering any section other than the engagement rate display."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

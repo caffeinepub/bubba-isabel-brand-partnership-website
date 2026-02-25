@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-in-the-media-kit-stats-section-update-the-engagement-rate-display-value-from-its-current-number-to-5-2",
+      "featureTitle": "In the media kit stats section, update the engagement rate display value from its current number to 5.2%.",
+      "files": [
+        "frontend/src/content/siteContent.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
